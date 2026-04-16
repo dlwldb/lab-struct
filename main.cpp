@@ -62,7 +62,7 @@ void score2grade(const int& score, char&grade)
 void inputStudent(student&s)
 {
   //s.name; //studentsName: kim, lee, park, numOfStudents (0~3)
-  s.name = static_cast<studentsName>(rand()% numOfStudents);//0~RAND_MAX의 int --> studentsName casting
+  s.name = static_cast<studentsName>(rand()% numofstudents);//0~RAND_MAX의 int --> studentsName casting
   std::cout <<"Enter id: ";
   std::cin >> s.id;
   std::cout << "Enter score: ";
@@ -75,7 +75,7 @@ void inputStudent(student&s)
 //name, id: score(grade) 형식으로 출력, name은 //printStudentName 함수이용
 void printStudent(const student&s)
 {
-    printStudentName(s.name);
+    printStudentsName(s.name);
     std::cout << s.id << ":" << s.score << "(" << s.grade << ")\n";
 }
 
